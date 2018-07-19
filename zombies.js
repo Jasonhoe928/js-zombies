@@ -108,9 +108,7 @@ class Weapon extends Item {
      this.isAlive = true;
      this._pack = [];
      this.equipped = false;
-     function getPack {
-       return pack;
-     }
+    
    }
  }
 
