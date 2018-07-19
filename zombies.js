@@ -100,18 +100,37 @@ class Weapon extends Item {
 
  class Player {
    constructor(name, health, strength, speed) {
-     this.name = name;
-     this.health = health;
-     this.strength = strength;
-     this.speed = speed;
-     this._maxHealth = health;
-     this.isAlive = true;
-     this._pack = [];
-     this.equipped = false;
-    
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this._maxHealth = health;
+    this.isAlive = true;
+    this._pack = [];
+    this.equipped = false; 
    }
- }
+   getPack() {
+      return this._pack;
+    }
+    getMaxHealth() {
+      return this._maxHealth;
+    }
+    takeItem(item) {
+      if(this._pack.length < 3) {
+        console.log(name + 'puts away' + item)
+        this._pack.push(item);
+        return true;
+      } else {
+        console.log('Puts away nothing.')
+        return false;
+      }
+    }
+   }
 
+   
+
+
+   
 /**
  * Player Class Method => checkPack()
  * -----------------------------
@@ -123,7 +142,7 @@ class Weapon extends Item {
  *
  * @name checkPack
  */
-
+class 
 
 /**
  * Player Class Method => takeItem(item)
@@ -143,6 +162,7 @@ class Weapon extends Item {
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
 
+ 
 
 /**
  * Player Class Method => discardItem(item)
